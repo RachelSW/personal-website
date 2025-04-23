@@ -1,196 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Stylish Portfolio - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Simple line icons-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#page-top">Start Bootstrap</a></li>
-                <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
-                <li class="sidebar-nav-item"><a href="#about">About</a></li>
-                <li class="sidebar-nav-item"><a href="#services">Services</a></li>
-                <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
-                <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Header-->
-        <header class="masthead d-flex align-items-center">
-            <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1">Stylish Portfolio</h1>
-                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
-                <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Rachel's portfolio site" />
+    <meta name="author" content="Rachel" />
+    <title>Rachel | Innovation in EdTech, Business, and the Classroom</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      header.masthead {
+        position: relative;
+      }
+      header.masthead::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+      header.masthead .container {
+        position: relative;
+        z-index: 2;
+      }
+      .bg-primary {
+        background-color: #2e8b57 !important;
+      }
+      .btn-primary {
+        background-color: #2e8b57;
+        border-color: #2e8b57;
+      }
+      .btn-primary:hover {
+        background-color: #276c48;
+        border-color: #276c48;
+      }
+      .carousel {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .menu-toggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1050;
+      }
+      nav#sidebar-wrapper {
+        position: fixed;
+        height: 100vh;
+        width: 250px;
+        background: #2e8b57;
+        color: white;
+        padding-top: 3rem;
+        display: none;
+        z-index: 1040;
+      }
+      nav#sidebar-wrapper.active {
+        display: block;
+      }
+      nav#sidebar-wrapper .sidebar-nav {
+        list-style: none;
+        padding: 0;
+      }
+      nav#sidebar-wrapper .sidebar-nav-item {
+        padding: 0.75rem 1rem;
+      }
+      nav#sidebar-wrapper .sidebar-nav-item a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".menu-toggle");
+        const sidebar = document.querySelector("#sidebar-wrapper");
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          sidebar.classList.toggle("active");
+        });
+      });
+    </script>
+  </head>
+  <body id="page-top">
+    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand"><a href="#page-top">Rachel</a></li>
+        <li class="sidebar-nav-item"><a href="#edtech">Ed Tech</a></li>
+        <li class="sidebar-nav-item"><a href="#business">Business</a></li>
+        <li class="sidebar-nav-item"><a href="#classroom">Classroom</a></li>
+        <li class="sidebar-nav-item"><a href="resume.pdf" download>Resume</a></li>
+      </ul>
+    </nav>
+
+    <header class="masthead d-flex align-items-center">
+      <div class="container px-4 px-lg-5 text-center">
+        <img src="assets/img/headshot.jpg" class="rounded-circle mb-4" width="150" height="150" alt="Rachel's photo" />
+        <h1 class="mb-1 text-white">Rachel</h1>
+        <h3 class="mb-3 text-white"><em>12+ years at the intersection of education, innovation, and strategic transformation</em></h3>
+        <p class="text-white">I'm a creative product owner and educator with 12+ years of experience navigating the intersections of education, innovation, and strategic change. I’ve worked internationally and across sectors, driving solutions that empower learners and streamline operations. Whether in a classroom or a cross-functional team, I lead with empathy, agility, and impact.</p>
+        <a class="btn btn-primary btn-xl mt-3" href="#edtech">Explore My Work</a>
+      </div>
+    </header>
+
+    <section class="content-section bg-light" id="edtech">
+      <div class="container px-4 px-lg-5 text-center">
+        <h2 class="mb-3">Innovation in Ed Tech</h2>
+        <p>Built and scaled the Virtual Educator Program (State Dept. funded, $1.6M/year). Led UX improvements, streamlined applicant systems, and introduced ClickUp for cross-team efficiency.</p>
+      </div>
+    </section>
+
+    <section class="content-section bg-primary text-white text-center" id="business">
+      <div class="container px-4 px-lg-5">
+        <h2 class="mb-3">Innovation in Business</h2>
+        <p>Led product development using Agile principles, defined strategic roadmaps, and launched DEIA initiatives. Championed SOPs and analytics to drive operational visibility.</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="classroom">
+      <div class="container px-4 px-lg-5 text-center">
+        <h2 class="mb-3">Innovation in the Classroom</h2>
+        <p>Launched multilingual children's books in Indonesia, taught 2,600 educators, and pioneered AR-based presentations for global learners. Delivered tech-infused curriculum in diverse settings.</p>
+        <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img/classroom-1.jpg" class="d-block w-100" alt="Student presentation" />
             </div>
-        </header>
-        <!-- About-->
-        <section class="content-section bg-light" id="about">
-            <div class="container px-4 px-lg-5 text-center">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-10">
-                        <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                        <p class="lead mb-5">
-                            This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-                            <a href="https://unsplash.com/">Unsplash</a>
-                            !
-                        </p>
-                        <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
-                    </div>
-                </div>
+            <div class="carousel-item">
+              <img src="assets/img/classroom-2.jpg" class="d-block w-100" alt="Book project" />
             </div>
-        </section>
-        <!-- Services-->
-        <section class="content-section bg-primary text-white text-center" id="services">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading">
-                    <h3 class="text-secondary mb-0">Services</h3>
-                    <h2 class="mb-5">What We Offer</h2>
-                </div>
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
-                        <h4><strong>Responsive</strong></h4>
-                        <p class="text-faded mb-0">Looks great on any screen size!</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
-                        <h4><strong>Redesigned</strong></h4>
-                        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
-                        <h4><strong>Favorited</strong></h4>
-                        <p class="text-faded mb-0">
-                            Millions of users
-                            <i class="fas fa-heart"></i>
-                            Start Bootstrap!
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
-                        <h4><strong>Question</strong></h4>
-                        <p class="text-faded mb-0">I mustache you a question...</p>
-                    </div>
-                </div>
+            <div class="carousel-item">
+              <img src="assets/img/classroom-3.jpg" class="d-block w-100" alt="Virtual workshop" />
             </div>
-        </section>
-        <!-- Callout-->
-        <section class="callout">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mx-auto mb-5">
-                    Welcome to
-                    <em>your</em>
-                    next website!
-                </h2>
-                <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
-            </div>
-        </section>
-        <!-- Portfolio-->
-        <section class="content-section" id="portfolio">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading text-center">
-                    <h3 class="text-secondary mb-0">Portfolio</h3>
-                    <h2 class="mb-5">Recent Projects</h2>
-                </div>
-                <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Stationary</div>
-                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Ice Cream</div>
-                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strawberries</div>
-                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Workspace</div>
-                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Call to Action-->
-        <section class="content-section bg-primary text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-                <a class="btn btn-xl btn-light me-4" href="#!">Click Me!</a>
-                <a class="btn btn-xl btn-dark" href="#!">Look at Me!</a>
-            </div>
-        </section>
-        <!-- Map-->
-        <div class="map" id="contact">
-            <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-            <br />
-            <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container px-4 px-lg-5">
-                <ul class="list-inline mb-5">
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-facebook"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
-                    </li>
-                </ul>
-                <p class="text-muted small mb-0">Copyright &copy; Your Website 2023</p>
-            </div>
-        </footer>
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+      </div>
+    </section>
+
+    <section class="callout">
+      <div class="container px-4 px-lg-5 text-center">
+        <h2 class="mx-auto mb-5">
+          Want to know more?
+          <em>Download my resume</em>
+        </h2>
+        <a class="btn btn-primary btn-xl" href="resume.pdf" download>Download Resume</a>
+      </div>
+    </section>
+
+    <footer class="footer text-center">
+      <div class="container px-4 px-lg-5">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="#"><i class="icon-social-linkedin"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="https://github.com/yourusername"><i class="icon-social-github"></i></a>
+          </li>
+        </ul>
+        <p class="text-muted small mb-0">&copy; 2025 Rachel</p>
+      </div>
+    </footer>
+
+    <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
